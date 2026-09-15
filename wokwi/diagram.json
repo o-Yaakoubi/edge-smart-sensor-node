@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "author": "Edge Smart Sensor Node",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot", "top": -126.1, "left": 249.4, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:GND.2", "pot:GND", "black", [ "h0" ] ],
+    [ "esp:3V3", "pot:VCC", "red", [ "h0" ] ],
+    [ "esp:34", "pot:SIG", "green", [ "h0" ] ],
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ]
+  ],
+  "dependencies": {}
+}
