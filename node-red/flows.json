@@ -1,1 +1,50 @@
-
+[
+    {
+        "id": "737eba0853330b2e",
+        "type": "mqtt in",
+        "z": "85d943dd7db00187",
+        "name": "Edge Alerts",
+        "topic": "edge/sensor/vibration/alerts",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "mqtt-broker-config",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 200,
+        "wires": [
+            [
+                "95393d88dc8187be"
+            ]
+        ]
+    },
+    {
+        "id": "mqtt-broker-config",
+        "type": "mqtt-broker",
+        "name": "test.mosquitto.org",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "node-red-edge-monitor",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]
